@@ -1,0 +1,24 @@
+{
+    "name": "phpslim/db",
+    "description": "PHP Database adaptor class",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+          "name": "Gursharanjit Singh",
+          "email": "g@hayer.me",
+          "homepage": "http://www.hayer.me",
+         "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {"SlimDB\\": "src/"},
+         "files": ["src/Functions.php"]
+    },
+    "support": {
+        "email": "g@hayer.me"
+    }
+}
