@@ -1,5 +1,5 @@
 <?php
-// Sample file for SlimPDO
+// Sample file for JattDB
 
 // Include composer autoload file
 require_once(dirname(__DIR__) . '/vendor/autoload.php');
