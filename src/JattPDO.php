@@ -10,8 +10,8 @@
  * @version    1.0.0
  * @link
  */
- namespace SlimDB;
- class SlimPDO{
+ namespace JattDB;
+ class JattPDO{
    private $data = array();
    protected $db;
    protected $statement;

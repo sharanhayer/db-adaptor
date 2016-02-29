@@ -12,6 +12,6 @@ $db_config = array(
   'password' => 'admin'
 );
 // Load PDO Adaptor
-$db = new SlimDB\SlimPDO($db_config);
+$db = new JattDB\JattPDO($db_config);
 echo "now \$db can be used to execute all database intaractions";
 ?>
