@@ -1,13 +1,10 @@
 <?php
 /**
- *
- * https://opensource.org/licenses/MIT The MIT License (MIT)
- *
  * @package    JattDB
  * @author     Gursharanjit Singh <g@hayer.me>
  * @copyright  2016
  * @license    https://opensource.org/licenses/MIT The MIT License (MIT)
- * @version    1.0.1
+ * @version    1.0.2
  * @link
  */
  namespace JattDB;
@@ -59,18 +56,18 @@
    if (is_null($type)) {
      switch (true) {
      case is_int($value):
-       $type = PDO::PARAM_INT;
+       $type = \PDO::PARAM_INT;
        break;
      case is_bool($value):
         $value = $this->escape($value);
-        $type = PDO::PARAM_BOOL;
+        $type = \PDO::PARAM_BOOL;
        break;
      case is_null($value):
-       $type = PDO::PARAM_NULL;
+       $type = \PDO::PARAM_NULL;
        break;
      default:
      $value = $this->escape($value);
-     $type = PDO::PARAM_STR;
+     $type = \PDO::PARAM_STR;
      }
    }
    $this->statement->bindValue($param, $value, $type);
@@ -88,12 +85,12 @@
 
  public function rows(){
    $this->execute();
-   return $this->statement->fetchAll(PDO::FETCH_ASSOC);
+   return $this->statement->fetchAll(\PDO::FETCH_ASSOC);
  }
 
  public function row(){
    $this->execute();
-   return $this->statement->fetch(PDO::FETCH_ASSOC);
+   return $this->statement->fetch(\PDO::FETCH_ASSOC);
  }
 
  public function rowCount(){
